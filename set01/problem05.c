@@ -17,6 +17,6 @@ int main() {
     printf("Enter three integers: ");
     scanf("%d %d %d", &a, &b, &c);
     int res=compare(a, b, c);
-    printf("the largest number is : %d",largest);
+    printf("the largest number is : %d",res);
     return 0;
 }
