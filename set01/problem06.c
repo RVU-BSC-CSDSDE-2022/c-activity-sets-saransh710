@@ -1,23 +1,21 @@
- #include <stdio.h>
+
+#include <stdio.h>
+
+void compare(int *a, int *b, int *c) {
+    int largest = *a;
+    if (*b > largest) {
+        largest = *b;
+    }
+    if (*c > largest) {
+        largest = *c;
+    }
+    printf("Largest number is: %d\n", largest);
+}
 
 int main() {
-   int a, b, c;
-     
-     printf(" Enter first Value ");
-     scanf("%d", &a) ;
-     printf(" Enter second Value ") ;
-     scanf("%d", &b) ;
-     printf(" Enter third Value ") ;
-     scanf("%d", &c) ;
-
-       if ( a > b && a > c )
-      printf("%d ", a);
-     else if ( b > a && b > c )
-      printf("%d ", b);
-      else if ( c > a && c > b )
-      printf("%d", c);
-      else   
-      printf("Values are not unique");
-
-   return 0;
+    int a, b, c;
+    printf("Enter three integers: ");
+    scanf("%d %d %d", &a, &b, &c);
+    compare(&a, &b, &c);
+    return 0;
 }

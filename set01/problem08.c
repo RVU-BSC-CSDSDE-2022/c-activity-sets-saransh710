@@ -1,29 +1,16 @@
-#include <stdio.h>
-#define MAX_SIZE 1000
-int input_arr(){
-int arr[MAX_SIZE]; // Declare an array of MAX_SIZE
-    int i, N;
-
-    /* Input array size */
-    printf("Enter size of array: ");
-    scanf("%d", &N);
-
-    /* Input elements in array */
-    printf("Enter %d elements in the array : ", N);
-    for(i=0; i<N; i++)
+#include<stdio.h>
+int main()
+{
+    int size,i,sum=0;
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+    int arr[size];
+    printf("Enter the elements of the array: ");
+    for(i=0;i<size;i++)
     {
-        scanf("%d", &arr[i]);
+        scanf("%d",&arr[i]);
+        sum=sum+arr[i];
     }
-
-
-    /*
-     * Print all elements of array
-     */
-    printf("\nElements in array are: ");
-    for(i=0; i<N; i++)
-    {
-        printf("%d, ", arr[i]);
-    }
-
+    printf("Sum of the array elements is: %d",sum);
     return 0;
 }

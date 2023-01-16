@@ -1,5 +1,55 @@
 #include <stdio.h>
+#include <string.h>
 
+int main()
+{
+    char str1[100], str2[100];
+    int i, j, len1, len2;
+    int flag = 0;
+
+    printf("Enter first string: ");
+    scanf("%s", str1);
+
+    printf("Enter second string: ");
+    scanf("%s", str2);
+
+    len1 = strlen(str1);
+    len2 = strlen(str2);
+
+    if (len1 == len2)
+    {
+        for (i = 0; i < len1; i++)
+        {
+            if (str1[i] != str2[i])
+            {
+                flag = 1;
+                break;
+            }
+        }
+    }
+    else
+    {
+        flag = 1;
+    }
+
+    if (flag == 1)
+    {
+        printf("Strings are not equal\n");
+    }
+    else
+    {
+        printf("Strings are equal\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+/*#include <stdio.h>
 void input_two_strings(char *string1, char *string2);
 int stringcompare(char *string1, char *string2);
 void output(char *string1, char *string2, int result);
@@ -60,4 +110,5 @@ void output(char *string1, char *string2, int result)
      printf("%s is greater\n", string1);
   if(result==2)
     printf("%s is greater\n", string2);
-}
+  }
+*/

@@ -1,3 +1,4 @@
+#include <stdio.h>
 int main()
 {
   int input_n, sum_n_nos = 0, x, value;

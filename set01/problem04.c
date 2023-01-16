@@ -1,24 +1,27 @@
-#include <stdio.h>
-long addTwoNumbers(long *, long *);
- 
-int main()
-{
-   long fno, sno, sum;
-   
-   printf("\n\n Pointer : Add two numbers using call by reference:\n"); 
-   printf("-------------------------------------------------------\n");   
- 
-   printf(" Input the first number : ");
-   scanf("%d", &fno);
-   printf(" Input the second  number : ");
-   scanf("%d", &sno);   
-   sum = addTwoNumbers(&fno, &sno);
-   printf(" The sum of %ld and %ld  is %ld\n\n", fno, sno, sum);
-   return 0;
+  #include <stdio.h>
+
+
+
+int input() {
+    int x;
+    printf("Enter an integer: ");
+    scanf("%d", &x);
+    return x;
 }
-long addTwoNumbers(long *n1, long *n2) 
-{
-   long sum;
-   sum = *n1 + *n2;
-   return sum;
+
+void add(int a, int b, int *sum) {
+    *sum = a + b;
+}
+
+void output(int a, int b, int sum) {
+    printf("%d + %d = %d\n", a, b, sum);
+}
+
+int main() {
+    int a = input();
+    int b = input();
+    int sum;
+    add(a, b, &sum);
+    output(a, b, sum);
+    return 0;
 }
