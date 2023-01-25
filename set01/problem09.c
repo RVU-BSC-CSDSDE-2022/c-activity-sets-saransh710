@@ -1,4 +1,36 @@
-#include <stdio.h>
+float srt(float inte){
+float a =1 ,b=0;
+for(int i=0;i<10000000;i++){
+b=inte/a;
+a=(b+a)/2;
+if(a==b)
+ break;
+}
+return a;
+
+}
+
+int input(){
+int y;
+printf(“enter the number ”);
+scanf(“%d”,&y);
+return y;
+}
+
+void output(int inte, float res){
+printf(“the square root of %d is %f”,inte,res);
+
+}
+
+
+
+int main(){
+float inte,res;
+inte=input();
+res=srt(inte);
+output(inte,res)
+Return 0;
+/*#include <stdio.h>
 #include <math.h> 
 
 double square_root(double num);
@@ -15,4 +47,4 @@ int main()
 double square_root(double num)
 {
     return sqrt(num);
-}
+}*/
