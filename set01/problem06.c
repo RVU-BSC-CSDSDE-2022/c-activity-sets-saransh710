@@ -16,7 +16,7 @@ int main() {
     int a, b, c;
     printf("Enter three integers: ");
     scanf("%d %d %d", &a, &b, &c);
-    compare( a, b, c);
+    compare( &a, &b, &c);
   
      return 0;
 }
