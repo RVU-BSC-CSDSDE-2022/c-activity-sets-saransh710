@@ -1,36 +1,34 @@
+#include<math.h>
+#include<stdio.h>
+
 struct camel {
-    float radius;
-    float height;
-    float length;
-    float weight;
+	float radius, height, length, weight;
 };
 
 typedef struct camel Camel;
 
-Camel input(){
-    Camel c;
-    printf("Enter radius: ");
-    scanf("%f", &c.radius);
-    printf("Enter height: ");
-    scanf("%f", &c.height);
-    printf("Enter length: ");
-    scanf("%f", &c.length);
-    printf("Enter weight: ");
-    scanf("%f", &c.weight);
-    return c;
+Camel input() {
+	Camel c;
+	printf("Enter the radius of the stomach: ");
+	scanf("%f", &c.radius);
+	printf("Enter the height of the camel: ");
+	scanf("%f", &c.height);
+	printf("Enter the length of the camel: ");
+	scanf("%f", &c.length);
+	return c;
 }
 
-float find_weight(Camel c){  //pass by value
-    return c.weight;
+void find_weight(Camel *c) {
+	c->weight = M_PI * pow(c->radius, 3) * sqrt(c->height * c->length);
 }
 
-void find_weight(Camel *c){ //passing address variable
-    printf("Weight: %f", c->weight);
+void output(Camel c) {
+	printf("The weight of the camel is: %.2f kg\n", c.weight);
 }
 
-void output(Camel c){
-    printf("Radius: %f\n", c.radius);
-    printf("Height: %f\n", c.height);
-    printf("Length: %f\n", c.length);
-    printf("Weight: %f\n", c.weight);
+int main() {
+	Camel c = input();
+	find_weight(&c);
+	output(c);
+	return 0;
 }
