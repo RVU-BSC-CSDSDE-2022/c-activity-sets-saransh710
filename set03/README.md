@@ -95,7 +95,7 @@ void output(int sum);
 05.  Write a program to find GCD _(HCF)_ of two numbers.
 
 ***Function Declarations***
-```c
+```c 
 int input();
 int find_gcd(int a, int b);
 void output(int a, int b, int gcd);
