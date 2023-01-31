@@ -10,15 +10,15 @@ return a;
 
 }
 
-int input(){
-int y;
+float input(){
+float y;
 printf(“enter the number ”);
-scanf(“%d”,&y);
+scanf("%f",&y);
 return y;
 }
 
-void output(int inte, float res){
-printf(“the square root of %d is %f”,inte,res);
+void output(float inte, float res){
+printf("the square root of %d is %f",inte,res);
 
 }
 

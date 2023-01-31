@@ -1,44 +1,36 @@
-void input_string(char *string1, char *string2);
-int compare(char *string1, char *string2);
-void output(char *string1, char  *string2, int result);
+#include <stdio.h>
 
-Void input_string(char *string1,char*string2){
-printf(“enter the first string”);
-scanf(“%s”,string1);
-printf(“enter the second string”)
-scanf(“%s”,string2)
-
+int input_array_size() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+    return n;
 }
 
-
-
-
-void compare(char *string1,char *string2,int res){
-int i;
-for (i=0;string1[i]@!=’\0’||string2[i]!=’\0’;i++){
-if (string1[i] != string2[i]){
-return (string1[i]-string2[i]);
-
-
-}
-Return 0;
-}
-Void output(char *string1,char *string2,int result){
-if (result==0){
-printf(“the string are equal)
-}
-if(result==1){
-printf(“the string are equal”)
-}
+void input_array(int n, int a[n]) {
+    printf("Enter the elements: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
 }
 
+int sum_n_array(int n, int a[n]) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += a[i];
+    }
+    return sum;
 }
-int main(){
-Char string1[100],string2[100];
-int result;
-input_string(string1,string2);
-result=compare(string1,string2,res);
-output(string1,string2,result);
 
-return 0;
+void output(int sum) {
+    printf("The sum of the array is %d", sum);
+}
+
+int main() {
+    int n, a[100], sum;
+    n = input_array_size();
+    input_array(n, a);
+    sum = sum_n_array(n, a);
+    output(sum);
+    return 0;
 }
