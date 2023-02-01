@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-typedef struct _triangle {
+ struct _triangle {
   float base, altitude, area;
-} Triangle;
+};
+typedef struct _triangle Triangle;
 
 Triangle input_triangle() {
   Triangle t;
