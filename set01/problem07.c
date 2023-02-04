@@ -1,25 +1,29 @@
+#include <stdio.h>
 int input_n();
 int sum_n_nos(int n);
-void output(int n, int sum);
+void output(int sum);
 
 
 int input_n(){
 int x;
-printf(“enter the value of n :”)
-scanf(“%d”,&x);
-Return x;
+printf("enter the value of n :");
+scanf("%d",&x);
+return x;
 
 
 }
-
 int sum_n_nos(int n){
 int sum=0;
-For(int i=1;i<=n;i++){	
+for(int i=1;i<=n;i++){	
   sum+=i;
 }
 return sum;
 }
+void output(int sum){
+  printf("the sum total is %d",sum);
 
+  
+}
 
 int main(){
 int n,sum;
