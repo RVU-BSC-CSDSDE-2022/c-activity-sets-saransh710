@@ -27,6 +27,11 @@ void output(int n, int result) {
     }
 }
 int main(){
+  int n,result;
+  n=input_number();
+  result=is_composite(n);
+  output(n,result);
+  return 0;
 
 
 
