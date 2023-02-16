@@ -1,36 +1,37 @@
 #include <stdio.h>
+#include <math.h>
 
-void input_string(char *string1, char *string2){
-    printf("Enter the first string: ");
-    scanf("%s", string1);
-    printf("Enter the second string: ");
-    scanf("%s", string2);
-}
+void input(float *x1, float *y1, float *x2, float *y2);
+float find_distance(float x1, float y1, float x2, float y2);
+void output(float x1, float y1, float x2, float y2, float distance);
 
-int compare(char *string1, char *string2){
-    int i;
-    for(i = 0; string1[i] != '\0' && string2[i] != '\0'; i++){
-        if(string1[i] != string2[i]){
-            return string1[i] - string2[i];
-        }
-    }
+int main() {
+    float x1, y1, x2, y2, distance;
+
+    input(&x1, &y1, &x2, &y2);
+    distance = find_distance(x1, y1, x2, y2);
+    output(x1, y1, x2, y2, distance);
+
     return 0;
 }
 
-void output(int res){
-    if(res == 0){
-        printf("The strings are equal\n");
-    }
-    else{
-        printf("The strings are not equal\n");
-    }
+void input(float *x1, float *y1, float *x2, float *y2) {
+    printf("Enter x1: ");
+    scanf("%f", x1);
+    printf("Enter y1: ");
+    scanf("%f", y1);
+    printf("Enter x2: ");
+    scanf("%f", x2);
+    printf("Enter y2: ");
+    scanf("%f", y2);
 }
 
-int main(){
-    char string1[100], string2[100];
-    int res;
-    input_string(string1, string2);
-    res = compare(string1, string2);
-    output(res);
-    return main();
+float find_distance(float x1, float y1, float x2, float y2) {
+    float dx = x2 - x1;
+    float dy = y2 - y1;
+    return sqrt(dx * dx + dy * dy);
+}
+
+void output(float x1, float y1, float x2, float y2, float distance) {
+    printf("Distance between (%.2f, %.2f) and (%.2f, %.2f) is %.2f\n", x1, y1, x2, y2, distance);
 }
