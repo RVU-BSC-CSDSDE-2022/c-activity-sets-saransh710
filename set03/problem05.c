@@ -7,16 +7,25 @@ int input() {
   return num;
 }
 
-int find_gcd(int a, int b) {
-  int remainder;
-  while (b != 0) {
-    remainder = a % b;
-    a = b;
-    b = remainder;
+//int find_gcd(int a, int b) {
+  //int remainder;
+  //while (b != 0) {
+    //remainder = a % b;
+   // a = b;
+    //b = remainder;
+  //}
+  //return a;
+//}
+int find_gcd(int a, int b){
+  int gcd,i;
+for(i=1; i <= n1 && i <= n2; ++i)
+    {
+        // Checks if i is factor of both integers
+        if(n1%i==0 && n2%i==0)
+            gcd = i;
+    }  
+  return gcd;
   }
-  return a;
-}
-
 void output(int a, int b, int gcd) {
   printf("The GCD of %d and %d is %d\n", a, b, gcd);
 }
