@@ -7,15 +7,28 @@ int input(int x) {
     return x;
 }
 
+//float borga_X(int x) {
+  //  int i = 1;
+    //float result = 1;
+    //float term = 1;
+
+//    while (fabs(term) >= 0.000001) {
+  //      term = pow(x, i) / (2 * i + 1);
+    //    result += term;
+      //  i++;
+    //}
+
+    //return result;
+//}
+
 float borga_X(int x) {
-    int i = 1;
+    int i;
     float result = 1;
     float term = 1;
 
-    while (fabs(term) >= 0.000001) {
+    for (i = 1; fabs(term) >= 0.000001; i++) {
         term = pow(x, i) / (2 * i + 1);
         result += term;
-        i++;
     }
 
     return result;

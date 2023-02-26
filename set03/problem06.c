@@ -11,7 +11,7 @@ void str_reverse(char *str, char *rev_str) {
   while (*p != '\0') {
     len++;
     p++;
-  }
+  }`
   int i;
   for (i = 0; i < len; i++) {
     rev_str[i] = str[len - i - 1];

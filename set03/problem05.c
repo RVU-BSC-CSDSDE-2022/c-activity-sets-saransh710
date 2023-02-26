@@ -26,6 +26,16 @@ for(i=1; i <= n1 && i <= n2; ++i)
     }  
   return gcd;
   }
+
+
+//    while(n1!=n2)
+    //{
+        //if(n1 > n2)
+      //      n1 -= n2;
+    //    else
+  //          n2 -= n1;
+//    }
+
 void output(int a, int b, int gcd) {
   printf("The GCD of %d and %d is %d\n", a, b, gcd);
 }
